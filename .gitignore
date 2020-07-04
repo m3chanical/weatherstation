@@ -1,3 +1,8 @@
+# User Adds
+sdkconfig*
+credentials.h
+build/
+
 # Prerequisites
 *.d
 
