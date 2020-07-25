@@ -1,0 +1,332 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 1
+Title "Weather Station PCB"
+Date "2020-07-22"
+Rev "A"
+Comp "Tinkerduck"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L SparkFun-Connectors:RJ11-6 J1
+U 1 1 5F14B6DF
+P 3200 3550
+F 0 "J1" H 3158 4360 45  0000 C CNN
+F 1 "RJ11-6" H 3158 4276 45  0000 C CNN
+F 2 "Connectors:RJ11-6" H 3200 4250 20  0001 C CNN
+F 3 "" H 3200 3550 50  0001 C CNN
+F 4 "CONN-08590" H 3158 4181 60  0000 C CNN "Field4"
+	1    3200 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L SparkFun-Connectors:RJ11-6 J2
+U 1 1 5F14BBE3
+P 3200 4600
+F 0 "J2" H 3158 5410 45  0000 C CNN
+F 1 "RJ11-6" H 3158 5326 45  0000 C CNN
+F 2 "Connectors:RJ11-6" H 3200 5300 20  0001 C CNN
+F 3 "" H 3200 4600 50  0001 C CNN
+F 4 "CONN-08590" H 3158 5231 60  0000 C CNN "Field4"
+	1    3200 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L SparkFun-Boards:ESP32_THING_W_ANT_KEEPOUT B1
+U 1 1 5F14CD04
+P 5000 4150
+F 0 "B1" H 5000 5510 45  0000 C CNN
+F 1 "ESP32_THING_W_ANT_KEEPOUT" H 5000 5426 45  0000 C CNN
+F 2 "Boards:ESP32_THING" H 5000 5350 20  0001 C CNN
+F 3 "" H 5000 4150 50  0001 C CNN
+F 4 "DEV-13907" H 5000 5331 60  0000 C CNN "Field4"
+	1    5000 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L dk_Humidity-Moisture-Sensors:BME280 U1
+U 1 1 5F1568CC
+P 7000 3750
+F 0 "U1" H 7328 3853 60  0000 L CNN
+F 1 "BME280" H 7328 3747 60  0000 L CNN
+F 2 "digikey-footprints:Pressure_Sensor_LGA-8_2.5x2.5mm_BME280" H 7200 3950 60  0001 L CNN
+F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME280-DS002.pdf" H 7200 4050 60  0001 L CNN
+F 4 "828-1063-1-ND" H 7200 4150 60  0001 L CNN "Digi-Key_PN"
+F 5 "BME280" H 7200 4250 60  0001 L CNN "MPN"
+F 6 "Sensors, Transducers" H 7200 4350 60  0001 L CNN "Category"
+F 7 "Humidity, Moisture Sensors" H 7200 4450 60  0001 L CNN "Family"
+F 8 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME280-DS002.pdf" H 7200 4550 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/bosch-sensortec/BME280/828-1063-1-ND/6136314" H 7200 4650 60  0001 L CNN "DK_Detail_Page"
+F 10 "SENSOR PRESSURE HUMIDITY TEMP" H 7200 4750 60  0001 L CNN "Description"
+F 11 "Bosch Sensortec" H 7200 4850 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 7200 4950 60  0001 L CNN "Status"
+	1    7000 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L SparkFun-Resistors:RESISTOR0603 R1
+U 1 1 5F1598AF
+P 7700 3100
+F 0 "R1" H 7700 3300 45  0000 C CNN
+F 1 "4.7k" H 7700 3200 45  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7700 3250 20  0001 C CNN
+F 3 "" H 7700 3100 60  0001 C CNN
+F 4 " " H 7700 3221 60  0000 C CNN "Field4"
+	1    7700 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L SparkFun-Resistors:RESISTOR0603 R2
+U 1 1 5F15A6C8
+P 6450 4650
+F 0 "R2" H 6450 4850 45  0000 C CNN
+F 1 "4.7k" H 6450 4750 45  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6450 4800 20  0001 C CNN
+F 3 "" H 6450 4650 60  0001 C CNN
+F 4 " " H 6450 4771 60  0000 C CNN "Field4"
+	1    6450 4650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5F15DE3E
+P 8050 4000
+F 0 "C2" H 8165 4046 50  0000 L CNN
+F 1 "100nF" H 8165 3955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 8088 3850 50  0001 C CNN
+F 3 "~" H 8050 4000 50  0001 C CNN
+	1    8050 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7000 3350 7000 3150
+Wire Wire Line
+	7000 3150 7100 3150
+Wire Wire Line
+	7100 3150 7100 3350
+Wire Wire Line
+	7100 3150 7100 2850
+Connection ~ 7100 3150
+$Comp
+L power:VDD #PWR0101
+U 1 1 5F1A61AF
+P 7100 2850
+F 0 "#PWR0101" H 7100 2700 50  0001 C CNN
+F 1 "VDD" H 7115 3023 50  0000 C CNN
+F 2 "" H 7100 2850 50  0001 C CNN
+F 3 "" H 7100 2850 50  0001 C CNN
+	1    7100 2850
+	1    0    0    -1  
+$EndComp
+Text Notes 7150 3000 0    50   ~ 0
+3.3 V
+Wire Wire Line
+	6600 3850 6450 3850
+Wire Wire Line
+	6250 3850 6250 3800
+$Comp
+L power:VDD #PWR0102
+U 1 1 5F1A72E3
+P 6250 3800
+F 0 "#PWR0102" H 6250 3650 50  0001 C CNN
+F 1 "VDD" H 6265 3973 50  0000 C CNN
+F 2 "" H 6250 3800 50  0001 C CNN
+F 3 "" H 6250 3800 50  0001 C CNN
+	1    6250 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5F1A7B5D
+P 7000 4250
+F 0 "#PWR0103" H 7000 4000 50  0001 C CNN
+F 1 "GND" H 7005 4077 50  0000 C CNN
+F 2 "" H 7000 4250 50  0001 C CNN
+F 3 "" H 7000 4250 50  0001 C CNN
+	1    7000 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 4050 7100 4150
+Wire Wire Line
+	7100 4150 7000 4150
+Wire Wire Line
+	7000 4150 7000 4250
+Wire Wire Line
+	7000 4050 7000 4150
+Connection ~ 7000 4150
+$Comp
+L dk_Terminal-Blocks-Wire-to-Board:1935161 J3
+U 1 1 5F1B3D0E
+P 3050 5050
+F 0 "J3" V 2825 5133 50  0000 C CNN
+F 1 "1935161" V 2916 5133 50  0000 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal" H 3250 5250 60  0001 L CNN
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/Phoenix%20Contact%20PDFs/1935161.pdf" H 3250 5350 60  0001 L CNN
+F 4 "277-1667-ND" H 3250 5450 60  0001 L CNN "Digi-Key_PN"
+F 5 "1935161" H 3250 5550 60  0001 L CNN "MPN"
+F 6 "Connectors, Interconnects" H 3250 5650 60  0001 L CNN "Category"
+F 7 "Terminal Blocks - Wire to Board" H 3250 5750 60  0001 L CNN "Family"
+F 8 "https://media.digikey.com/pdf/Data%20Sheets/Phoenix%20Contact%20PDFs/1935161.pdf" H 3250 5850 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/phoenix-contact/1935161/277-1667-ND/568614" H 3250 5950 60  0001 L CNN "DK_Detail_Page"
+F 10 "TERM BLK 2POS SIDE ENTRY 5MM PCB" H 3250 6050 60  0001 L CNN "Description"
+F 11 "Phoenix Contact" H 3250 6150 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 3250 6250 60  0001 L CNN "Status"
+	1    3050 5050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3250 5050 3550 5050
+Wire Wire Line
+	3550 5050 3550 5000
+Wire Wire Line
+	3250 5150 3550 5150
+Wire Wire Line
+	3550 5150 3550 5200
+$Comp
+L power:VDD #PWR0104
+U 1 1 5F1B8204
+P 3550 5000
+F 0 "#PWR0104" H 3550 4850 50  0001 C CNN
+F 1 "VDD" H 3565 5173 50  0000 C CNN
+F 2 "" H 3550 5000 50  0001 C CNN
+F 3 "" H 3550 5000 50  0001 C CNN
+	1    3550 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5F1B86D6
+P 3550 5200
+F 0 "#PWR0105" H 3550 4950 50  0001 C CNN
+F 1 "GND" H 3555 5027 50  0000 C CNN
+F 2 "" H 3550 5200 50  0001 C CNN
+F 3 "" H 3550 5200 50  0001 C CNN
+	1    3550 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H3
+U 1 1 5F1BA54B
+P 2000 3750
+F 0 "H3" H 2100 3799 50  0000 L CNN
+F 1 "MountingHole_Pad" H 2100 3708 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 2000 3750 50  0001 C CNN
+F 3 "~" H 2000 3750 50  0001 C CNN
+	1    2000 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H1
+U 1 1 5F1BA88B
+P 1650 3900
+F 0 "H1" H 1750 3949 50  0000 L CNN
+F 1 "MountingHole_Pad" H 1750 3858 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 1650 3900 50  0001 C CNN
+F 3 "~" H 1650 3900 50  0001 C CNN
+	1    1650 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H4
+U 1 1 5F1BABDB
+P 2000 4150
+F 0 "H4" H 2100 4199 50  0000 L CNN
+F 1 "MountingHole_Pad" H 2100 4108 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 2000 4150 50  0001 C CNN
+F 3 "~" H 2000 4150 50  0001 C CNN
+	1    2000 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H2
+U 1 1 5F1BAF09
+P 1650 4300
+F 0 "H2" H 1750 4349 50  0000 L CNN
+F 1 "MountingHole_Pad" H 1750 4258 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad" H 1650 4300 50  0001 C CNN
+F 3 "~" H 1650 4300 50  0001 C CNN
+	1    1650 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F1C0B08
+P 1850 4600
+F 0 "#PWR?" H 1850 4350 50  0001 C CNN
+F 1 "GND" H 1855 4427 50  0000 C CNN
+F 2 "" H 1850 4600 50  0001 C CNN
+F 3 "" H 1850 4600 50  0001 C CNN
+	1    1850 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 4000 1850 4000
+Wire Wire Line
+	1850 4000 1850 4550
+Wire Wire Line
+	1650 4400 1650 4550
+Wire Wire Line
+	1650 4550 1850 4550
+Connection ~ 1850 4550
+Wire Wire Line
+	1850 4550 1850 4600
+Wire Wire Line
+	2000 4250 2000 4550
+Wire Wire Line
+	2000 4550 1850 4550
+Wire Wire Line
+	2000 3850 1850 3850
+Wire Wire Line
+	1850 3850 1850 4000
+Connection ~ 1850 4000
+$Comp
+L power:VDD #PWR?
+U 1 1 5F1C797B
+P 8050 3650
+F 0 "#PWR?" H 8050 3500 50  0001 C CNN
+F 1 "VDD" H 8065 3823 50  0000 C CNN
+F 2 "" H 8050 3650 50  0001 C CNN
+F 3 "" H 8050 3650 50  0001 C CNN
+	1    8050 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F1C7E8A
+P 8050 4350
+F 0 "#PWR?" H 8050 4100 50  0001 C CNN
+F 1 "GND" H 8055 4177 50  0000 C CNN
+F 2 "" H 8050 4350 50  0001 C CNN
+F 3 "" H 8050 4350 50  0001 C CNN
+	1    8050 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 4350 8050 4150
+Wire Wire Line
+	8050 3650 8050 3850
+Wire Wire Line
+	6600 3550 6600 3400
+Wire Wire Line
+	6600 3650 6350 3650
+Wire Wire Line
+	6350 3650 6350 3400
+Text Label 6350 3400 0    50   ~ 0
+SDA
+Text Label 6600 3400 0    50   ~ 0
+SCL
+Wire Wire Line
+	6600 3750 6450 3750
+Wire Wire Line
+	6450 3750 6450 3850
+Connection ~ 6450 3850
+Wire Wire Line
+	6450 3850 6250 3850
+$EndSCHEMATC

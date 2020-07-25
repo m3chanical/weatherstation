@@ -8,12 +8,18 @@
 #include "nvs_flash.h"
 #include "driver/gpio.h"
 
+#include "mqtt_client.h"
+
 #include "weatherstation.h"
 #include "credentials.h" // Place wifi info here
 
 // Private Function Declarations
 void weatherInit(void);
 void wifiInit(void);
+void mqttInit(void);
+
+static esp_err_t mqtt_event_handler_cb(esp_mqtt_event_handle_t event);
+static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event_id, void *event_data);
 esp_err_t event_handler(void *, system_event_t *);
 // Private Variables
 tcpip_adapter_ip_info_t ip;
@@ -24,6 +30,7 @@ void app_main(void)
     // Initialize the things!
     wifiInit();
     weatherInit();
+    mqttInit();
 
     while (true) {
         vTaskDelay(500 / portTICK_PERIOD_MS);
@@ -41,10 +48,6 @@ void app_main(void)
     }
 }
 
-void weatherInit(void)
-{
-    gpio_set_direction(GPIO_NUM_4, GPIO_MODE_OUTPUT);
-}
 
 void wifiInit(void)
 {
@@ -66,6 +69,27 @@ void wifiInit(void)
     ESP_ERROR_CHECK( esp_wifi_start() );
     ESP_ERROR_CHECK( esp_wifi_connect() );
     memset(&ip, 0, sizeof(tcpip_adapter_ip_info_t));
+}
+
+void weatherInit(void)
+{
+    gpio_set_direction(GPIO_NUM_4, GPIO_MODE_OUTPUT);
+}
+
+void mqttInit(void)
+{
+    esp_mqtt_client_config_t mqtt_cfg = {
+        .uri = "mqtt://localhost:1883", // TODO: Determine which URIs are acceptable
+    };
+}
+
+static esp_err_t mqtt_event_handler_cb(esp_mqtt_event_handle_t event)
+{
+    return 0;
+}
+static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event_id, void *event_data)
+{
+    return;
 }
 
 esp_err_t event_handler(void *ctx, system_event_t *event)
