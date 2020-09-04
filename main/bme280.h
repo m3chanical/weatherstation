@@ -6,7 +6,7 @@
 
 // EXPORTED FUNCTIONS
 
-int bme280_init(void);
-int bme280_get_sensor_data(int data);
+int bme2800_init(void);
+void bme280_get_data(void);
 
 #endif /* _BME280_H */

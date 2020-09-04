@@ -353,9 +353,9 @@ Text Label 7400 4400 0    50   ~ 0
 SCL
 Wire Wire Line
 	5800 3500 6000 3500
-Text Label 6000 3500 0    50   ~ 0
-SDA
 Text Label 6000 3800 0    50   ~ 0
+SDA
+Text Label 6000 3500 0    50   ~ 0
 SCL
 Wire Wire Line
 	4200 3300 4100 3300
