@@ -393,19 +393,6 @@ Text Notes 3200 2350 0    50   ~ 0
 Anemometer & Wind Vane
 Wire Wire Line
 	1550 1800 1650 1800
-Wire Wire Line
-	1900 1800 1900 1700
-$Comp
-L power:GND #PWR0113
-U 1 1 5F5080AA
-P 1900 1700
-F 0 "#PWR0113" H 1900 1450 50  0001 C CNN
-F 1 "GND" H 1905 1527 50  0000 C CNN
-F 2 "" H 1900 1700 50  0001 C CNN
-F 3 "" H 1900 1700 50  0001 C CNN
-	1    1900 1700
-	-1   0    0    1   
-$EndComp
 Text Notes 3200 2650 0    50   ~ 0
 Anemometer: Two inner conductors\nWind Vane: Two outer conductors
 Wire Wire Line
@@ -488,9 +475,6 @@ Wire Wire Line
 	1550 1600 1750 1600
 Wire Wire Line
 	1750 1600 1750 1800
-Connection ~ 1750 1800
-Wire Wire Line
-	1750 1800 1900 1800
 Wire Wire Line
 	1550 1700 1650 1700
 Wire Wire Line
@@ -653,4 +637,9 @@ Wire Wire Line
 	4300 1750 4500 1750
 Wire Wire Line
 	4300 2200 4300 2300
+Wire Wire Line
+	1750 1800 1750 2100
+Wire Wire Line
+	1750 2100 1700 2100
+Connection ~ 1750 1800
 $EndSCHEMATC

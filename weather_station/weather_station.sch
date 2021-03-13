@@ -393,7 +393,7 @@ Text Notes 3200 2350 0    50   ~ 0
 Anemometer & Wind Vane
 Wire Wire Line
 	1550 1800 1650 1800
-Text Notes 3200 2650 0    50   ~ 0
+Text Notes 3200 2700 0    50   ~ 0
 Anemometer: Two inner conductors\nWind Vane: Two outer conductors
 Wire Wire Line
 	2050 1900 2050 2250
@@ -609,10 +609,10 @@ Wire Wire Line
 Wire Wire Line
 	3900 1950 3900 2000
 $Comp
-L Device:C C?
+L Device:C C3
 U 1 1 5F63B6B2
 P 4300 2050
-F 0 "C?" H 4415 2096 50  0000 L CNN
+F 0 "C3" H 4415 2096 50  0000 L CNN
 F 1 "10pF" H 4415 2005 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4338 1900 50  0001 C CNN
 F 3 "~" H 4300 2050 50  0001 C CNN
@@ -620,10 +620,10 @@ F 3 "~" H 4300 2050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0113
 U 1 1 5F63BB57
 P 4300 2300
-F 0 "#PWR?" H 4300 2050 50  0001 C CNN
+F 0 "#PWR0113" H 4300 2050 50  0001 C CNN
 F 1 "GND" H 4305 2127 50  0000 C CNN
 F 2 "" H 4300 2300 50  0001 C CNN
 F 3 "" H 4300 2300 50  0001 C CNN
