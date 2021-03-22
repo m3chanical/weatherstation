@@ -20,4 +20,5 @@
   (lib (name Silicon-Custom)(type KiCad)(uri ${KICAD_USER_LIBRARY}/SparkFun-KiCad-Libraries/Footprints/Silicon-Custom.pretty)(options "")(descr ""))
   (lib (name Silicon-Standard)(type KiCad)(uri ${KICAD_USER_LIBRARY}/SparkFun-KiCad-Libraries/Footprints/Silicon-Standard.pretty)(options "")(descr ""))
   (lib (name Switches)(type KiCad)(uri ${KICAD_USER_LIBRARY}/SparkFun-KiCad-Libraries/Footprints/Switches.pretty)(options "")(descr ""))
+  (lib (name weather_station)(type KiCad)(uri /home/sinbeard/esp/weatherstation/weather_station)(options "")(descr ""))
 )

@@ -11,6 +11,7 @@
 #include "mqtt_client.h"
 
 #include "weatherstation.h"
+#include "bme280.h" 
 #include "credentials.h" // Place wifi info here
 
 // Private Function Declarations
@@ -73,7 +74,12 @@ void wifiInit(void)
 
 void weatherInit(void)
 {
+    int ret = 0;
     gpio_set_direction(GPIO_NUM_4, GPIO_MODE_OUTPUT);
+    ret = bme2800_init();
+    if(ret < 0)
+        ESP_LOGI(LOG_TAG, "BME280 Init Fail");
+    ESP_LOGI(LOG_TAG, "BME280 Init Complete");
 }
 
 void mqttInit(void)
