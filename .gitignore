@@ -22,7 +22,8 @@ build/
 *.pch
 
 # Libraries
-*.lib
+# Need .lib for kicad >.>
+#*.lib
 *.a
 *.la
 *.lo
