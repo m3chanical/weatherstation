@@ -1,0 +1,28 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>KiCad BOM Example 5</title>
+    </head>
+    <body>
+    <h1>/home/sinbeard/development/weatherstation/weather_station/weather_station.sch</h1>
+    <p>Fri 26 Mar 2021 11:36:47 PM EDT</p>
+    <p>Eeschema 5.1.9</p>
+    <p><b>Component Count:</b>17</p>
+    <table>
+    <tr><th style='width:640px'>Ref</th><th>Qnty</th><th>Value</th><th>Part</th><th>Footprint</th><th>Description</th><th>Vendor</th></tr>
+    <tr><td>C1, C3</td><td>2</td><td>10pF</td><td>Device:C</td><td>Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder</td><td>Unpolarized capacitor</td><td></td></tr>
+    <tr><td>C2</td><td>1</td><td>100nF</td><td>Device:C</td><td>Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder</td><td>Unpolarized capacitor</td><td></td></tr>
+    <tr><td>H1, H2, H3, H4</td><td>4</td><td>MountingHole_Pad</td><td>Mechanical:MountingHole_Pad</td><td>MountingHole:MountingHole_3.2mm_M3_Pad</td><td>Mounting Hole with connection</td><td></td></tr>
+    <tr><td>J1, J2</td><td>2</td><td>RJ11-6</td><td>SparkFun-Connectors:RJ11-6</td><td>Connectors:RJ11-6</td><td>RJ11 Jack - 6 pin Commonly found on CAT3 devices and some Microchip programmers. <b>Here is the connector we sell at SparkFun:</b><ul><li><a href="https://www.sparkfun.com/products/132">RJ11 6-Pin Connector</a> (PRT-00132)</li><li><a href="http://www.sparkfun.com/datasheets/Prototyping/Connectors/RJ11-Datasheet.pdf">Datasheet</a></ul> <b>It is used on this SparkFun product:</b><ul><li><a href="https://www.sparkfun.com/products/12081">SparkFun Weather Shield</a> (DEV-12081)</li><li><a href="https://www.sparkfun.com/products/8942">Weather Meters</a> (SEN-08942)</li></ul></td><td></td></tr>
+    <tr><td>J3</td><td>1</td><td>1935161</td><td>dk_Terminal-Blocks-Wire-to-Board:1935161</td><td>TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal</td><td>TERM BLK 2POS SIDE ENTRY 5MM PCB</td><td></td></tr>
+    <tr><td>R1, R2, R5</td><td>3</td><td>4.7k</td><td>SparkFun-Resistors:RESISTOR0603</td><td>Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder</td><td>Generic Resistor Package</td><td></td></tr>
+    <tr><td>R3, R4</td><td>2</td><td>100k</td><td>SparkFun-Resistors:RESISTOR0603</td><td>Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder</td><td>Generic Resistor Package</td><td></td></tr>
+    <tr><td>U1</td><td>1</td><td>BME280</td><td>dk_Humidity-Moisture-Sensors:BME280</td><td>digikey-footprints:Pressure_Sensor_LGA-8_2.5x2.5mm_BME280</td><td>SENSOR PRESSURE HUMIDITY TEMP</td><td></td></tr>
+    <tr><td>U2</td><td>1</td><td>ESP32-DEVKITC-32D</td><td>ESP32-DEVKITC-32D:ESP32-DEVKITC-32D</td><td>weather_station:MODULE_ESP32-DEVKITC-32D</td><td></td><td></td></tr><!--TABLEROW-->
+    </table>
+    </body>
+</html>
+    

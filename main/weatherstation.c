@@ -85,7 +85,7 @@ void weatherInit(void)
 void mqttInit(void)
 {
     esp_mqtt_client_config_t mqtt_cfg = {
-        .uri = "mqtt://localhost:1883", // TODO: Determine which URIs are acceptable
+        .uri = "mqtt://192.168.1.119:1883", // TODO: Determine which URIs are acceptable
     };
 }
 
