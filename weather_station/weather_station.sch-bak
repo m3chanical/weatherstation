@@ -5,38 +5,14 @@ $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "Weather Station PCB"
-Date "2020-07-22"
-Rev "A"
+Date "2021-03-28"
+Rev "B"
 Comp "Tinkerduck"
 Comment1 ""
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L SparkFun-Connectors:RJ11-6 J1
-U 1 1 5F14B6DF
-P 1450 2100
-F 0 "J1" H 1408 2910 45  0000 C CNN
-F 1 "RJ11-6" H 1408 2826 45  0000 C CNN
-F 2 "Connectors:RJ11-6" H 1450 2800 20  0001 C CNN
-F 3 "" H 1450 2100 50  0001 C CNN
-F 4 "CONN-08590" H 1408 2731 60  0000 C CNN "Field4"
-	1    1450 2100
-	1    0    0    -1  
-$EndComp
-$Comp
-L SparkFun-Connectors:RJ11-6 J2
-U 1 1 5F14BBE3
-P 3400 2050
-F 0 "J2" H 3358 2860 45  0000 C CNN
-F 1 "RJ11-6" H 3358 2776 45  0000 C CNN
-F 2 "Connectors:RJ11-6" H 3400 2750 20  0001 C CNN
-F 3 "" H 3400 2050 50  0001 C CNN
-F 4 "CONN-08590" H 3358 2681 60  0000 C CNN "Field4"
-	1    3400 2050
-	1    0    0    -1  
-$EndComp
 $Comp
 L dk_Humidity-Moisture-Sensors:BME280 U1
 U 1 1 5F1568CC
@@ -63,7 +39,7 @@ U 1 1 5F1598AF
 P 8800 4950
 F 0 "R1" H 8800 5150 45  0000 C CNN
 F 1 "4.7k" H 8800 5050 45  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 8800 5100 20  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" H 8800 5100 20  0001 C CNN
 F 3 "" H 8800 4950 60  0001 C CNN
 F 4 " " H 8800 5071 60  0000 C CNN "Field4"
 	1    8800 4950
@@ -75,7 +51,7 @@ U 1 1 5F15A6C8
 P 8450 4950
 F 0 "R2" H 8450 5150 45  0000 C CNN
 F 1 "4.7k" H 8450 5050 45  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 8450 5100 20  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" H 8450 5100 20  0001 C CNN
 F 3 "" H 8450 4950 60  0001 C CNN
 F 4 " " H 8450 5071 60  0000 C CNN "Field4"
 	1    8450 4950
@@ -87,7 +63,7 @@ U 1 1 5F15DE3E
 P 7950 4950
 F 0 "C2" H 8065 4996 50  0000 L CNN
 F 1 "100nF" H 8065 4905 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 7988 4800 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 7988 4800 50  0001 C CNN
 F 3 "~" H 7950 4950 50  0001 C CNN
 	1    7950 4950
 	1    0    0    -1  
@@ -358,22 +334,18 @@ SDA
 Text Label 6000 3500 0    50   ~ 0
 SCL
 Wire Wire Line
-	4200 3300 4100 3300
-Wire Wire Line
-	4100 3300 4100 3050
-Wire Wire Line
-	5800 3300 6050 3300
+	3900 5100 3900 4850
 Wire Wire Line
 	6050 3300 6050 3050
 $Comp
 L power:VDD #PWR0111
 U 1 1 5F4E95A3
-P 4100 3050
-F 0 "#PWR0111" H 4100 2900 50  0001 C CNN
-F 1 "VDD" H 4115 3223 50  0000 C CNN
-F 2 "" H 4100 3050 50  0001 C CNN
-F 3 "" H 4100 3050 50  0001 C CNN
-	1    4100 3050
+P 3900 4850
+F 0 "#PWR0111" H 3900 4700 50  0001 C CNN
+F 1 "VDD" H 3915 5023 50  0000 C CNN
+F 2 "" H 3900 4850 50  0001 C CNN
+F 3 "" H 3900 4850 50  0001 C CNN
+	1    3900 4850
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -392,10 +364,6 @@ Rain Meter
 Text Notes 3200 2350 0    50   ~ 0
 Anemometer & Wind Vane
 Wire Wire Line
-	1550 1800 1650 1800
-Text Notes 3200 2650 0    50   ~ 0
-Anemometer: Two inner conductors\nWind Vane: Two outer conductors
-Wire Wire Line
 	2050 1900 2050 2250
 $Comp
 L Device:C C1
@@ -403,25 +371,13 @@ U 1 1 5F5253B2
 P 2050 2400
 F 0 "C1" H 2165 2446 50  0000 L CNN
 F 1 "10pF" H 2165 2355 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2088 2250 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 2088 2250 50  0001 C CNN
 F 3 "~" H 2050 2400 50  0001 C CNN
 	1    2050 2400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	5800 3800 6000 3800
-$Comp
-L ESP32-DEVKITC-32D:ESP32-DEVKITC-32D U2
-U 1 1 5F49C879
-P 5000 4200
-F 0 "U2" H 5000 5367 50  0000 C CNN
-F 1 "ESP32-DEVKITC-32D" H 5000 5276 50  0000 C CNN
-F 2 "weather_station:MODULE_ESP32-DEVKITC-32D" H 5000 4200 50  0001 L BNN
-F 3 "Espressif Systems" H 5000 4200 50  0001 L BNN
-F 4 "4" H 5000 4200 50  0001 L BNN "Field4"
-	1    5000 4200
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR03
 U 1 1 5F5423A1
@@ -452,7 +408,7 @@ U 1 1 5F5102BE
 P 2050 1600
 F 0 "R3" H 2050 1800 45  0000 C CNN
 F 1 "100k" H 2050 1700 45  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2050 1750 20  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" H 2050 1750 20  0001 C CNN
 F 3 "" H 2050 1600 60  0001 C CNN
 F 4 " " H 2050 1721 60  0000 C CNN "Field4"
 	1    2050 1600
@@ -471,24 +427,6 @@ Text Label 2200 1900 0    50   ~ 0
 RAIN
 Text Label 3900 3700 0    50   ~ 0
 RAIN
-Wire Wire Line
-	1550 1600 1750 1600
-Wire Wire Line
-	1750 1600 1750 1800
-Wire Wire Line
-	1550 1700 1650 1700
-Wire Wire Line
-	1650 1700 1650 1800
-Connection ~ 1650 1800
-Wire Wire Line
-	1650 1800 1750 1800
-Wire Wire Line
-	1550 2100 1700 2100
-Wire Wire Line
-	1550 2000 1700 2000
-Wire Wire Line
-	1700 2000 1700 2100
-Connection ~ 1700 2100
 $Comp
 L power:GND #PWR01
 U 1 1 5F562D2C
@@ -500,8 +438,6 @@ F 3 "" H 1700 2350 50  0001 C CNN
 	1    1700 2350
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1700 2100 1700 2350
 Text Notes 7100 2850 0    50   ~ 0
 Temperature & Humidity
 $Comp
@@ -510,14 +446,12 @@ U 1 1 5F5CD842
 P 4300 1400
 F 0 "R5" H 4300 1600 45  0000 C CNN
 F 1 "4.7k" H 4300 1500 45  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4300 1550 20  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" H 4300 1550 20  0001 C CNN
 F 3 "" H 4300 1400 60  0001 C CNN
 F 4 " " H 4300 1521 60  0000 C CNN "Field4"
 	1    4300 1400
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	3500 1650 4300 1650
 Wire Wire Line
 	4300 1650 4300 1600
 $Comp
@@ -538,33 +472,7 @@ Wire Wire Line
 Connection ~ 4300 1650
 Text Label 4500 1650 0    50   ~ 0
 WIND_DIR
-$Comp
-L power:GND #PWR06
-U 1 1 5F5D2AF1
-P 3900 2000
-F 0 "#PWR06" H 3900 1750 50  0001 C CNN
-F 1 "GND" H 3905 1827 50  0000 C CNN
-F 2 "" H 3900 2000 50  0001 C CNN
-F 3 "" H 3900 2000 50  0001 C CNN
-	1    3900 2000
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3500 1950 3700 1950
-Wire Wire Line
-	3500 2050 3700 2050
-Wire Wire Line
-	3700 2050 3700 1950
-Connection ~ 3700 1950
-Wire Wire Line
-	3500 1750 3900 1750
 Text Label 4500 1750 0    50   ~ 0
-WIND_SPD
-Wire Wire Line
-	3500 1850 3700 1850
-Wire Wire Line
-	3700 1850 3700 1950
-Text Label 3900 3900 0    50   ~ 0
 WIND_SPD
 Text Label 3900 3800 0    50   ~ 0
 WIND_DIR
@@ -572,15 +480,13 @@ Wire Wire Line
 	3900 3700 4200 3700
 Wire Wire Line
 	3900 3800 4200 3800
-Wire Wire Line
-	3900 3900 4200 3900
 $Comp
 L SparkFun-Resistors:RESISTOR0603 R4
 U 1 1 5F5E8AAF
 P 3900 1300
 F 0 "R4" H 3900 1500 45  0000 C CNN
 F 1 "100k" H 3900 1400 45  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3900 1450 20  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" H 3900 1450 20  0001 C CNN
 F 3 "" H 3900 1300 60  0001 C CNN
 F 4 " " H 3900 1421 60  0000 C CNN "Field4"
 	1    3900 1300
@@ -604,26 +510,22 @@ Wire Wire Line
 Connection ~ 3900 1750
 Wire Wire Line
 	3900 1750 4300 1750
-Wire Wire Line
-	3700 1950 3900 1950
-Wire Wire Line
-	3900 1950 3900 2000
 $Comp
-L Device:C C?
+L Device:C C3
 U 1 1 5F63B6B2
 P 4300 2050
-F 0 "C?" H 4415 2096 50  0000 L CNN
+F 0 "C3" H 4415 2096 50  0000 L CNN
 F 1 "10pF" H 4415 2005 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4338 1900 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 4338 1900 50  0001 C CNN
 F 3 "~" H 4300 2050 50  0001 C CNN
 	1    4300 2050
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0113
 U 1 1 5F63BB57
 P 4300 2300
-F 0 "#PWR?" H 4300 2050 50  0001 C CNN
+F 0 "#PWR0113" H 4300 2050 50  0001 C CNN
 F 1 "GND" H 4305 2127 50  0000 C CNN
 F 2 "" H 4300 2300 50  0001 C CNN
 F 3 "" H 4300 2300 50  0001 C CNN
@@ -638,8 +540,252 @@ Wire Wire Line
 Wire Wire Line
 	4300 2200 4300 2300
 Wire Wire Line
-	1750 1800 1750 2100
+	3900 5100 4200 5100
+$Comp
+L KevinsLib:S35770 U3
+U 1 1 6062BF52
+P 3850 6500
+F 0 "U3" H 3850 7015 50  0000 C CNN
+F 1 "S35770" H 3850 6924 50  0000 C CNN
+F 2 "Package_SO:SSOP-8_5.25x5.24mm_P1.27mm" H 3850 6500 50  0001 C CNN
+F 3 "DOCUMENTATION" H 3850 6500 50  0001 C CNN
+	1    3850 6500
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	1750 2100 1700 2100
-Connection ~ 1750 1800
+	4600 6450 4800 6450
+Wire Wire Line
+	4600 6550 4800 6550
+Text Label 4800 6450 0    50   ~ 0
+SCL
+Text Label 4800 6550 0    50   ~ 0
+SDA
+NoConn ~ 5800 3400
+NoConn ~ 5800 3600
+NoConn ~ 5800 3700
+NoConn ~ 5800 4000
+NoConn ~ 5800 4100
+NoConn ~ 5800 4200
+NoConn ~ 5800 4300
+NoConn ~ 5800 4400
+NoConn ~ 5800 4500
+NoConn ~ 5800 4600
+NoConn ~ 5800 4700
+NoConn ~ 5800 4800
+NoConn ~ 5800 4900
+NoConn ~ 5800 5000
+NoConn ~ 5800 5100
+NoConn ~ 4200 3300
+NoConn ~ 4200 3400
+NoConn ~ 4200 3500
+NoConn ~ 4200 3600
+NoConn ~ 4200 4000
+NoConn ~ 4200 4100
+NoConn ~ 4200 4200
+NoConn ~ 4200 4300
+NoConn ~ 4200 4400
+NoConn ~ 4200 4500
+NoConn ~ 4200 4700
+NoConn ~ 4200 4800
+NoConn ~ 4200 4900
+NoConn ~ 4200 5000
+$Comp
+L ESP32-DEVKITC-32D:ESP32-DEVKITC-32D U2
+U 1 1 5F49C879
+P 5000 4200
+F 0 "U2" H 5000 5367 50  0000 C CNN
+F 1 "ESP32-DEVKITC-32D" H 5000 5276 50  0000 C CNN
+F 2 "weather_station:MODULE_ESP32-DEVKITC-32D" H 5000 4200 50  0001 L BNN
+F 3 "Espressif Systems" H 5000 4200 50  0001 L BNN
+F 4 "4" H 5000 4200 50  0001 L BNN "Field4"
+	1    5000 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 3900 5950 3900
+Wire Wire Line
+	4200 4600 4050 4600
+Wire Wire Line
+	4050 4600 4050 4750
+$Comp
+L power:GND #PWR07
+U 1 1 6067F820
+P 4050 4750
+F 0 "#PWR07" H 4050 4500 50  0001 C CNN
+F 1 "GND" H 4055 4577 50  0000 C CNN
+F 2 "" H 4050 4750 50  0001 C CNN
+F 3 "" H 4050 4750 50  0001 C CNN
+	1    4050 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 3300 6050 3300
+Wire Wire Line
+	5950 3900 5950 4000
+$Comp
+L power:GND #PWR08
+U 1 1 60682547
+P 5950 4000
+F 0 "#PWR08" H 5950 3750 50  0001 C CNN
+F 1 "GND" H 5955 3827 50  0000 C CNN
+F 2 "" H 5950 4000 50  0001 C CNN
+F 3 "" H 5950 4000 50  0001 C CNN
+	1    5950 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0114
+U 1 1 60688FAA
+P 2900 6800
+F 0 "#PWR0114" H 2900 6550 50  0001 C CNN
+F 1 "GND" H 2905 6627 50  0000 C CNN
+F 2 "" H 2900 6800 50  0001 C CNN
+F 3 "" H 2900 6800 50  0001 C CNN
+	1    2900 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR0115
+U 1 1 606895B9
+P 4750 6100
+F 0 "#PWR0115" H 4750 5950 50  0001 C CNN
+F 1 "VDD" H 4765 6273 50  0000 C CNN
+F 2 "" H 4750 6100 50  0001 C CNN
+F 3 "" H 4750 6100 50  0001 C CNN
+	1    4750 6100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 6100 4750 6350
+Wire Wire Line
+	4750 6350 4600 6350
+Wire Wire Line
+	2900 6800 2900 6650
+Wire Wire Line
+	2900 6650 3100 6650
+Wire Wire Line
+	3100 6550 2900 6550
+Text Label 2900 6550 0    50   ~ 0
+WIND_SPD
+NoConn ~ 4600 6650
+Wire Wire Line
+	3100 6350 2900 6350
+Wire Wire Line
+	2900 6350 2900 6250
+$Comp
+L power:VDD #PWR0116
+U 1 1 6069890B
+P 2900 5700
+F 0 "#PWR0116" H 2900 5550 50  0001 C CNN
+F 1 "VDD" H 2915 5873 50  0000 C CNN
+F 2 "" H 2900 5700 50  0001 C CNN
+F 3 "" H 2900 5700 50  0001 C CNN
+	1    2900 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L SparkFun-Resistors:RESISTOR0603 R6
+U 1 1 606A1223
+P 2900 6050
+F 0 "R6" H 2900 6250 45  0000 C CNN
+F 1 "1k" H 2900 6150 45  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" H 2900 6200 20  0001 C CNN
+F 3 "" H 2900 6050 60  0001 C CNN
+F 4 " " H 2900 6171 60  0000 C CNN "Field4"
+	1    2900 6050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2900 5850 2900 5750
+Wire Wire Line
+	2900 5750 2450 5750
+Wire Wire Line
+	2450 5750 2450 5850
+Connection ~ 2900 5750
+Wire Wire Line
+	2900 5750 2900 5700
+$Comp
+L Device:C C4
+U 1 1 606AD925
+P 2450 6000
+F 0 "C4" H 2565 6046 50  0000 L CNN
+F 1 "100nF" H 2565 5955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 2488 5850 50  0001 C CNN
+F 3 "~" H 2450 6000 50  0001 C CNN
+	1    2450 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 6150 2450 6650
+Wire Wire Line
+	2450 6650 2900 6650
+Connection ~ 2900 6650
+$Comp
+L Connector:Screw_Terminal_01x03 J2
+U 1 1 60663675
+P 3255 1750
+F 0 "J2" H 3173 1425 50  0000 C CNN
+F 1 "Screw_Terminal_01x03" H 3173 1516 50  0000 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-3_1x03_P5.00mm_Horizontal" H 3255 1750 50  0001 C CNN
+F 3 "~" H 3255 1750 50  0001 C CNN
+	1    3255 1750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3455 1650 4300 1650
+Wire Wire Line
+	3455 1750 3900 1750
+Wire Wire Line
+	3455 1850 3655 1850
+Wire Wire Line
+	3655 1850 3655 1975
+$Comp
+L power:GND #PWR06
+U 1 1 6069179A
+P 3655 1975
+F 0 "#PWR06" H 3655 1725 50  0001 C CNN
+F 1 "GND" H 3660 1802 50  0000 C CNN
+F 2 "" H 3655 1975 50  0001 C CNN
+F 3 "" H 3655 1975 50  0001 C CNN
+	1    3655 1975
+	1    0    0    -1  
+$EndComp
+Connection ~ 3655 1975
+Wire Wire Line
+	3655 1975 3655 1980
+$Comp
+L dk_Terminal-Blocks-Wire-to-Board:1935161 J1
+U 1 1 60699DEC
+P 1350 1900
+F 0 "J1" V 1125 1983 50  0000 C CNN
+F 1 "1935161" V 1216 1983 50  0000 C CNN
+F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal" H 1550 2100 60  0001 L CNN
+F 3 "https://media.digikey.com/pdf/Data%20Sheets/Phoenix%20Contact%20PDFs/1935161.pdf" H 1550 2200 60  0001 L CNN
+F 4 "277-1667-ND" H 1550 2300 60  0001 L CNN "Digi-Key_PN"
+F 5 "1935161" H 1550 2400 60  0001 L CNN "MPN"
+F 6 "Connectors, Interconnects" H 1550 2500 60  0001 L CNN "Category"
+F 7 "Terminal Blocks - Wire to Board" H 1550 2600 60  0001 L CNN "Family"
+F 8 "https://media.digikey.com/pdf/Data%20Sheets/Phoenix%20Contact%20PDFs/1935161.pdf" H 1550 2700 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/phoenix-contact/1935161/277-1667-ND/568614" H 1550 2800 60  0001 L CNN "DK_Detail_Page"
+F 10 "TERM BLK 2POS SIDE ENTRY 5MM PCB" H 1550 2900 60  0001 L CNN "Description"
+F 11 "Phoenix Contact" H 1550 3000 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 1550 3100 60  0001 L CNN "Status"
+	1    1350 1900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1550 2000 1700 2000
+Wire Wire Line
+	1700 2000 1700 2350
+$Comp
+L Graphic:Logo_Open_Hardware_Large #LOGO1
+U 1 1 606C9F87
+P 10020 6255
+F 0 "#LOGO1" H 10020 6755 50  0001 C CNN
+F 1 "Logo_Open_Hardware_Large" H 10020 5855 50  0001 C CNN
+F 2 "" H 10020 6255 50  0001 C CNN
+F 3 "~" H 10020 6255 50  0001 C CNN
+	1    10020 6255
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

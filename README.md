@@ -20,3 +20,16 @@ Port should be the device path of the usb device. e.g. `/dev/ttyUSB0`
 ## Monitor
 
 `idf.py -p <port> monitor`
+
+## MQTT
+
+On the dev branch is a test set up for MQTT hardcoded to a MQTT server on my LAN. I'll break it out into `credentials.h` but for now this will do.
+It subscribes to `/topic/qos0` (from protocols/mqtt example from esp-idf) and can be tested with the following:
+```
+# Publish:
+mosquitto_pub -h <ip> -p <port> -t /topic/qos0 -m "message"
+
+# Subscribe:
+# This will subscribe to all topics for debugging
+mosquitto_sub -v -h <ip> -p <port> -t '#'
+```
